@@ -1,0 +1,23 @@
+<ion-view view-title="Registro" name="registro-view">
+  <ion-content class="padding">
+      <div class="list list-inset">
+          <label class="item item-input">
+              <input type="email" placeholder="Enter Email" ng-model="data.email">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Password" ng-model="data.password">
+          </label>
+          <label class="item item-input">
+              <input type="password" placeholder="Confirm Password" ng-model="data.password_confirmation">
+          </label>
+          <label class="item item-input">
+              <input type="text" placeholder="Enter Username" ng-model="data.username">
+          </label>
+      </div>
+      <button class="button button-block button-calm" ng-click="registro()">Login</button>
+      <a ng-click = toLogin()> Tengo una cuenta </a>
+      <div class="item item-text-wrap">
+                        Response: <b ng-bind="response"></b>
+                    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+<ion-view view-title="Camera" name="camera-view">
+  <ion-content class="padding">
+        <button ng-click="tomaFoto()" class="button button-balanced button-block">Take Photo!</button>
+        <div class="card">
+                    <div class="item item-text-wrap altura">
+                        <img ng-src={{lastPhoto}} style="max-width: 100%" />
+                    </div>
+                </div>
+        
+        <button class="button button-balanced button-block" ng-click="upload()">Upload Image</button>
+        <div class="card">
+                    <div class="item item-text-wrap">
+                        <img ng-src={{response}} style="max-width: 100%" />
+                    </div>
+                </div>
+  </ion-content>
+</ion-view>
