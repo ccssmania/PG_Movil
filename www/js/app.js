@@ -55,7 +55,7 @@ example.controller('AppCtrl', function($scope, $http,$state) {
     };
     $scope.login = function(){
       console.log("hola", $scope.data);
-        var link = 'http://192.168.100.8:8080/sessions/movil';
+        var link = 'https://avocadosutp.herokuapp.com/sessions/movil';
 
         $http.post(link, {email : "ccss@utp.edu.co", password: "12345678" }).then(function (res){
             $scope.response = res.data.message;
@@ -76,7 +76,7 @@ example.controller('RegistroCtrl', function($scope, $http,$state) {
     };
     $scope.registro = function(){
       console.log("hola", $scope.data);
-        var link = 'http://192.168.100.8:8080/users/movil';
+        var link = 'https://avocadosutp.herokuapp.com/users/movil';
 
         $http.post(link, {email : $scope.data.email, password: $scope.data.password, 
           password_confirmation: $scope.data.password_confirmation,
@@ -119,7 +119,7 @@ example.controller("ExampleController", function($scope, $cordovaFileTransfer, C
       chunkedMode: false,
       mimeType: "image/png"
     };
-    $cordovaFileTransfer.upload("http://192.168.100.8:8080/app/imagenes/movil", dir, options).then(function(result) {
+    $cordovaFileTransfer.upload("https://avocadosutp.herokuapp.com/app/imagenes/movil", dir, options).then(function(result) {
       console.log("Code = " + result.responseCode);
       console.log("Response = " + result.response);
       console.log("Sent = " + result.bytesSent);
