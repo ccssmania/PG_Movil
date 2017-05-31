@@ -26,6 +26,7 @@ example.run(function($ionicPlatform) {
 });
 
 
+
 example.config(function($stateProvider,$urlRouterProvider){
   console.log("privider");
   $stateProvider
@@ -47,6 +48,7 @@ example.config(function($stateProvider,$urlRouterProvider){
   });
   $urlRouterProvider.otherwise('/login');
 });
+
 
 example.controller('AppCtrl', function($scope, $http,$state) {
     $scope.data = {};
@@ -106,7 +108,7 @@ example.controller("ExampleController", function($scope, $cordovaFileTransfer, C
     }, function(err){
       console.log(err);
     }, {
-      quality: 75,
+      quality: 100,
       targetWidth: 200,
       targetHeight: 200,
       saveToPhotoAlbum: false

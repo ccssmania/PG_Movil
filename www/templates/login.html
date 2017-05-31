@@ -1,5 +1,8 @@
-<ion-view view-title="Login" name="login-view">
-  <ion-content class="padding">
+<ion-view view-title="Iniciar Sesión" class="bar-stable" name="login-view">
+  <ion-nav-bar class="bar bar-balanced">
+    <ion-nav-back-button></ion-nav-back-button>
+  </ion-nav-bar>
+  <ion-content class="padding padding-top">
       <div class="list list-inset">
           <label class="item item-input">
               <input type="email" placeholder="Username" ng-model="data.username">
@@ -8,7 +11,7 @@
               <input type="password" placeholder="Password" ng-model="data.password">
           </label>
       </div>
-      <button class="button button-block button-calm" ng-click="login()">Login</button>
+      <button class="button button-block button-calm" ng-click="login()">Iniciar Sesión</button>
       <a ng-click = toRegister()> Registrarse </a>
   </ion-content>
 </ion-view>

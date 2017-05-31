@@ -2,3 +2,17 @@
 .altura{
 	height: 310px;
 }
+
+.scroll-content {
+    background: url('../img/logo_utp.jpg');
+
+    
+
+  }
+
+.bar-balance{
+	background-color: #03215A;
+}
+.padding-top{
+	padding-top: 100px;
+}
