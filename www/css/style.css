@@ -4,11 +4,15 @@
 }
 
 .scroll-content {
-    background: url('../img/logo_utp.jpg');
-
-    
-
+    background-image:  url('../img/logo_utp.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
+.scroll-content-banner {
+    background-image: url('../img/banner.v1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+ }
 
 .bar-balance{
 	background-color: #03215A;
