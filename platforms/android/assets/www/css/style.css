@@ -3,8 +3,8 @@
 	height: 310px;
 }
 
-.scroll-content {
-    background-image:  url('../img/logo_utp.jpg');
+.scroll-content-login {
+    background-image:  url('../img/logo_utp.png');
     background-repeat: no-repeat;
     background-position: bottom;
   }
@@ -14,9 +14,33 @@
     background-position: center;
  }
 
-.bar-balance{
-	background-color: #03215A;
+.bar-balanced2{
+	background-color: black;
 }
 .padding-top{
-	padding-top: 100px;
+	padding-top: 60px;
+}
+.item p{
+    right: 0px;
+    width: auto;
+    padding: 10px;
+}
+i .large{
+	color: white;
+	font-size: 90px;
+}
+
+.item-text-wrap{
+	overflow: initial;
+    white-space: initial;
+}
+.item img{
+	max-width: 100% !important;
+}
+.grey{
+	background-color: #eee;
+}
+.grey p{
+	font-size: 10px;
+	color: black;
 }

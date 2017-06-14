@@ -45,10 +45,33 @@ example.config(function($stateProvider,$urlRouterProvider){
     url: '/camera',
     templateUrl: 'templates/camera.html',
     controller : 'ExampleController'
+  })
+  .state('bienvenida',{
+    url: '/bienvenida',
+    templateUrl: 'templates/bienvenida.html',
+    controller : 'BienvenidaController'
+  })
+  .state('home-avocado',{
+    url: '/home-avocado',
+    templateUrl: 'templates/home.html',
+    controller : 'HomeController'
   });
   $urlRouterProvider.otherwise('/login');
 });
 
+example.controller('BienvenidaController', function($scope,$state){
+  $scope.cam= function(){
+    $state.go('camera');
+  };
+  $scope.info = function(){
+    $state.go('home-avocado');
+  };
+});
+example.controller('HomeController', function($scope,$state){
+  $scope.cam = function(){
+    $state.go('camera');
+  };
+});
 
 example.controller('AppCtrl', function($scope, $http,$state) {
     $scope.data = {};
@@ -56,16 +79,16 @@ example.controller('AppCtrl', function($scope, $http,$state) {
       $state.go('registro');
     };
     $scope.login = function(){
-      console.log("hola", $scope.data);
+      console.log("hola", $scope.data.password, " username " , $scope.data.username);
         var link = 'https://avocadosutp.herokuapp.com/sessions/movil';
 
-        $http.post(link, {email : "ccss@utp.edu.co", password: "12345678" }).then(function (res){
+        $http.post(link, {email : $scope.data.username, password: $scope.data.password }).then(function (res){
             $scope.response = res.data.message;
 
             console.log(res.data);
             if(res.data.message == "loggedIn"){
               console.log("hola");
-              $state.go('camera');
+              $state.go('bienvenida');
             }
         });
     };
